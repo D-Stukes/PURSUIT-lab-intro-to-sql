@@ -108,18 +108,19 @@ SELECT * FROM houses;
 --
  \echo Count the total number of gifts that have the word candle in it
 -- 
-
+SELECT COUNT(*) FROM houses WHERE gift LIKE %candle% 
 
 --
 \echo Get the AVEREAGE value from all the gifts
 --
-
+SELECT AVG(value) FROM houses
 
 -- 
  \echo Limit to 3 gifts, offset by 2 and order by price descending
 --
-
+SELECT * FROM houses LIMIT 3 OFFSET 2 ORDER BY value DESC
 --
 -- finish
 --
 DROP TABLE IF EXISTS gifts;
+DROP TABLE gifts
